@@ -172,4 +172,27 @@ const myFavoriteFootballTeam = {
         },
     ],
 };
+
+/* 
+const sport = myFavoriteFootballTeam.sport;
+const team = myFavoriteFootballTeam.team; 
+*/
+
+const { sport, team, year, players } = myFavoriteFootballTeam; // object destructuring syntax;
+
+const { coachName } = myFavoriteFootballTeam.headCoach;
+
 // End of Variables
+
+// Freeze Object method
+Object.freeze(myFavoriteFootballTeam);
+
+/*
+Checking if the freeze Object method is working
+
+myFavoriteFootballTeam.team = 'USA';
+console.log(myFavoriteFootballTeam.team);
+
+*/
+// End of Freeze Object method
+
