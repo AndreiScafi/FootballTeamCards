@@ -184,6 +184,13 @@ const { coachName } = myFavoriteFootballTeam.headCoach;
 
 // End of Variables
 
+// Displaying team's information
+typeOfSport.textContent = sport;
+teamName.textContent = team;
+worldCupYear.textContent = year;
+headCoach.textContent = coachName;
+// End of Displaying team's information
+
 // Freeze Object method
 Object.freeze(myFavoriteFootballTeam);
 
