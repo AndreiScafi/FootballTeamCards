@@ -173,6 +173,18 @@ const myFavoriteFootballTeam = {
     ],
 };
 
+// Freeze Object method
+Object.freeze(myFavoriteFootballTeam);
+
+/*
+Checking if the freeze Object method is working
+
+myFavoriteFootballTeam.team = 'USA';
+console.log(myFavoriteFootballTeam.team);
+
+*/
+// End of Freeze Object method
+
 /* 
 const sport = myFavoriteFootballTeam.sport;
 const team = myFavoriteFootballTeam.team; 
@@ -191,15 +203,25 @@ worldCupYear.textContent = year;
 headCoach.textContent = coachName;
 // End of Displaying team's information
 
-// Freeze Object method
-Object.freeze(myFavoriteFootballTeam);
+// Show player's card function
+const setPlayerCards = (arr = players) => {
+    playerCards.innerHTML += arr.map(({ name, position, number, isCaptain, nickname }) => {
+        `
+        <div class="player-card">
+        <h2>${name} ${isCaptain ? '(Captain)' : ''}</h2>
+        <p>Position: ${position}</p>
+        <p>Number: ${number}</p>
+        <p>Nickname: ${nickname !== null ? nickname : "N/A"}</p>
+        </div>
+        `
+    }).join('');
+};
+// End of Show player's card function
 
-/*
-Checking if the freeze Object method is working
+// Event Linsteners
+playersDropdownList.addEventListener('change', (e) => {
 
-myFavoriteFootballTeam.team = 'USA';
-console.log(myFavoriteFootballTeam.team);
+});
+// End of Event Linsteners
 
-*/
-// End of Freeze Object method
 
